@@ -1,0 +1,32 @@
+dataset:
+  train_dir: "C:/Users/ASUS/Downloads/python_base/deep_learning/binary_classify/dataset/training_set"
+  test_dir: "C:/Users/ASUS/Downloads/python_base/deep_learning/binary_classify/dataset/test_set"
+  IMAGE_WIDTH: 224
+  IMAGE_HEIGHT: 224
+  n_class: 2
+
+  dataloader:
+    train:
+      batchsize: 32
+      num_worker: 0
+      shuffle: True
+    test:
+      batchsize: 32
+      num_worker: 0
+      shuffle: False
+
+model:
+  in_dim: 3
+  n_class: 2
+  h_dim: 32
+  n_layer: 4
+
+optimizer:
+  lr: 1e-3
+
+trainer:
+  epoch: 10
+
+
+infer:
+  checkpoint_path: "C:/Users/ASUS/Downloads/python_base/deep_learning/binary_classify/experiments/epoch_5.pt"
